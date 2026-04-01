@@ -1,1 +1,134 @@
+.kaba-booking-wrapper {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 20px;
+}
 
+.kaba-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f1f1;
+}
+
+.kaba-form-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.kaba-form-header h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.kaba-form-header p {
+  font-size: 14px;
+  color: #777;
+}
+
+.kaba-form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.kaba-form-group input,
+.kaba-form-group select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+/* Focus */
+.kaba-form-group input:focus,
+.kaba-form-group select:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.kaba-form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.kaba-datetime-row .kaba-form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Add padding for icon */
+.kaba-datetime-row input {
+  padding-right: 40px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Remove inner styling (fix spacing issues) */
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Custom calendar icon */
+.kaba-date-group::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: url('https://cdn-icons-png.flaticon.com/512/747/747310.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.kaba-form-group select {
+  cursor: pointer;
+}
+
+.kaba-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.kaba-btn:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+}
+
+.kaba-message {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: green;
+}
+
+
+@media (max-width: 600px) {
+  .kaba-form-row {
+    flex-direction: column;
+  }
+}
